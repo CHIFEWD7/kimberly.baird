@@ -1,2 +1,0 @@
-# kimberly.baird
-Kimberly Baird
