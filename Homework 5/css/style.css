@@ -1,0 +1,203 @@
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+.clearfix:after {
+	display: block;
+	height: 0;
+	clear: both;
+	line-height: 0;
+	content: ".";
+
+	visibility: hidden;
+}
+
+/* Your styles here */
+body{
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	font-size: 1rem;
+}
+p{
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	margin: 0 0 10px 0;
+}
+p:last-child{
+	margin-bottom: 0;
+}
+
+/* Layout */
+.site{
+	padding: 20px;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/*
+A few notes to consider as we build this together...
+---
+1) I want all spacing to be identical so the layout looks good. Putting 10px of margin between items, 10px of padding inside of items, etc
+
+2) Anywhere we use a border let's use "1px solid #ccc" for the value, so they all match
+
+3) Keep an eye on Line 49 of this file where ".site" is defined. We'll be referring to that quite a bit throughout class
+
+4) For projects you build and this one alike, check out where typography is defined on its own above, starting on Line 26
+
+*/
+
+.north,
+.hero,
+.about,
+.features,
+.south{
+	border: 1px solid #ccc;
+	margin: 0 0 10px 0;
+	padding: 10px;
+}
+
+.north{
+	background: #fff;
+}
+
+.logo{
+	float: left;
+	width: 40%;
+	border: 1px solid #ccc;
+	font-size: .875rem;
+	text-align: left;
+	text-transform: uppercase;
+	padding: 10px;
+	margin: 0;
+	color: #666;
+}
+.main-navigation{
+	float: right;
+	width: 60%;
+}
+.main-navigation ul{
+	list-style: none;
+	width: 100%;
+}
+.main-navigation ul li{
+	float: left;
+	display: inline;
+	width: 25%;
+	padding: 0 10px;
+}
+.main-navigation ul li a{
+	display: block;
+	font-size: .875rem;
+	font-weight: bold;
+	color: #666;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 1px solid #ccc;
+	padding: 10px 0;
+}
+.main-navigation ul li a:hover{
+	background: #efefef;
+	color: #666;
+}
+
+.hero{
+	text-align: center;
+}
+
+.about{
+	text-align: center;
+	padding: 50px;
+}
+
+/* ADD YOUR OWN 2 COLUMN BOXES ABOVE FEATURES */
+
+.features{
+	padding-bottom: 5px;
+}
+
+.features .feature{
+	width: 25%;
+	float: left;
+	padding: 5px;
+}
+.features .feature .feature-inner {
+	padding: 10px;
+	border: 1px solid #ccc;
+
+}
+.south{
+
+}
+
+/* Mobile Layout*/
+@media screen and (max-width: 768px){
+
+.north{
+	padding-bottom: 0;
+}
+
+.logo{
+	text-align: center;
+	float: none;
+	width: 100%;
+	margin: 0 0 10px 0;
+}
+.main-navigation{
+	float: none;
+	width: 100%
+}
+
+.main-navigation ul{
+	overflow: hidden;
+
+}
+
+.main-navigation ul li{
+	display: block;
+	width: 100%;
+	float: none;
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+.features .feature{
+	width: 50%;
+	float: left;
+	text-align: center;
+
+}
+.south{
+	text-align: center;
+}
+@media screen and (max-width: 450px)
+{
+	html{
+		font-size: 20px;
+	}
+	.features .feature{
+		width: 100%;
+		float: none;
+	}
+}
+
+
