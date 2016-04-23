@@ -4,17 +4,20 @@
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
- */
+ * { border: 1px solid black;*/
 
+* { border: 1px solid black;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -85,10 +88,10 @@ textarea {
    ========================================================================== */
 
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 /* ==========================================================================
@@ -96,14 +99,242 @@ textarea {
    ========================================================================== */
 
 
+.Site{
+  // width: 1024px;
+  // margin: 0 auto;
+  position: relative; 
+
+}
+.North{
+  margin: auto 0;
+  padding: 15px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #c69649;
+}
 
 
+.Welcome {
+  padding: 40px 50px 40px 20px;
+  height: 500px;
+  background-image: url(../img/bgd_candy-1.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #000;
+
+}
+a.Logo {
+  text-align: center;
+  width: 25%;
+  color: #fff;
+  font-size: 80px;
+  text-decoration-style: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+}
+.Hero{
+  text-align: center;
+  height: 700px;
+  background: yellow;
+  padding-bottom: 70px;
+  position: relative;
+  padding: 50px;
+}
+
+.MainNavigation{
+  background: #c69649;
+  padding: 30px 0 30px 0px;
+  height: 140px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; 
+  display: block;
+}
+
+.MainNavigation._sticky{
+  position: fixed;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.MainNavigation ul{
+  text-align: center;
+  width: 100%;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0; 
+  overflow: hidden;
+}
+
+.MainNavigation ul li{
+  display: inline;
+  padding: 20px 10px 20px 10px;
+}
 
 
+div.Content_Candy { 
+  margin: 0 auto;
+  background-image: url(../img/bgd_candy-1.png);
+  padding:20px;
+  display: block;
+  height: 400px;
+  position: relative;
+}
+
+.West {
+  float: left;
+  width: 60%;
+  padding-right: 10px;
+  padding-left: 
+}
 
 
+.East{
+  float: right;
+  width: 40%;
+}
 
 
+.Content_Candy {
+  height: 200px;
+  margin: 0px auto;
+  background-image: url(../img/bgd_candy-1.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.Blurb {
+
+  width: 100%;
+  // background: #fff;
+  /* Using the "alpha" in RGBA will just control the background color */
+  background: rgba(255,255,255,.8);
+]  padding: 100px;
+
+  /* Opacity will control the whole box and everything inside of it */
+  // opacity: .2;
+  width: 80%;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #c69649;
+}
+p.Description {
+  text-align: left;
+}
+
+
+.carousel {
+  position: relative;
+  list-style: none;
+}
+
+.carousel > li {
+  position: absolute;
+}
+
+.carousel > li:not(.active) {
+  display: none;
+}
+  
+.carousel > li.next-in {
+  animation: next-in 0.5s;
+}
+
+.carousel > li.next-out {
+  animation: next-out 0.5s;
+}
+
+.carousel > li.prev-in {
+  animation: prev-in 0.5s;
+}
+
+.carousel > li.prev-out {
+  animation: prev-out 0.5s;
+}
+  
+@keyframes next-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes next-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes prev-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes prev-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+/* NOT RELATED TO TUTORIAL */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff) format('woff');
+}
+
+body { 
+  transform: translateZ(0px);
+  font-family: 'Source Sans Pro';
+}
+
+a, a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  margin: 5px
+}
+
+img {
+  display: block;
+}
 
 
 
