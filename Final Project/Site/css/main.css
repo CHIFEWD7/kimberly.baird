@@ -5,9 +5,10 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  * { border: 1px solid black;*/
-
-* { border: 1px solid black;
-}
+/*
+* { 
+  border: 1px solid black;
+}*/
 
 html {
   box-sizing: border-box;
@@ -100,11 +101,15 @@ textarea {
 
 
 .Site{
-  // width: 1024px;
-  // margin: 0 auto;
-  position: relative; 
-
+  position: relative;
 }
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
 .North{
   margin: auto 0;
   padding: 15px 0;
@@ -114,137 +119,292 @@ textarea {
 
 
 .Welcome {
-  padding: 40px 50px 40px 20px;
+  text-align: center;
+  padding: 80px 50px 40px 20px;
   height: 500px;
-  background-image: url(../img/bgd_candy-1.png);
-  background-repeat: no-repeat;
+ 
+  background-image: url(../img/hero_chocolate.png);
+  background-position: 50% 30%; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #000;
 
+  
 }
-a.Logo {
-  text-align: center;
-  width: 25%;
+.Welcome h1 {
+  font-size: 60px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
   color: #fff;
-  font-size: 80px;
-  text-decoration-style: none;
-  font-family: 'Josefin Sans', sans-serif;
+}
+.Welcome p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4em;
+  color: #fed494;
+}
+.Welcome p span {
+  color: #5ac4c4;
 }
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
 
-}
+
 .Hero{
   text-align: center;
-  height: 700px;
-  background: yellow;
-  padding-bottom: 70px;
   position: relative;
-  padding: 50px;
+  /* This height needs to match .MainNavigatin's height. */
+  padding-bottom: 130px;
+  background: #c69649;
 }
+
 
 .MainNavigation{
-  background: #c69649;
-  padding: 30px 0 30px 0px;
-  height: 140px;
+  
+  padding: 10px 0 10px 0px;
+  text-align: center;
   width: 100%;
-  margin: 0 auto;
-  text-align: center; 
-  display: block;
+  overflow: hidden;
+  /* This height needs to match .Hero's bottom padding. */
+  height: 130px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-box-shadow: 0px -11px 44px 0px rgba(44,38,28,1);
+  -moz-box-shadow: 0px -11px 44px 0px rgba(44,38,28,1);
+  box-shadow: 0px -11px 44px 0px rgba(44,38,28,1);
 }
 
-.MainNavigation._sticky{
+/*.MainNavigation._sticky{
   position: fixed;
-  margin: 0 auto;
   top: 0;
   left: 0;
   width: 100%;
-}
+  bottom: auto;
+  z-index: 100;
+}*/
+
 .MainNavigation ul{
-  text-align: center;
-  width: 100%;
+  margin: 0;
+  padding: 0;
   list-style: none;
-  margin: 0 auto;
-  padding: 0; 
-  overflow: hidden;
+  position: relative;
+  float: left;
+  left: 50%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .MainNavigation ul li{
-  display: inline;
-  padding: 20px 10px 20px 10px;
-}
-
-
-div.Content_Candy { 
-  margin: 0 auto;
-  background-image: url(../img/bgd_candy-1.png);
-  padding:20px;
-  display: block;
-  height: 400px;
   position: relative;
-}
-
-.West {
   float: left;
-  width: 60%;
-  padding-right: 10px;
-  padding-left: 
+  right: 50%;
+  margin: 0 0 0 70px;
 }
 
-
-.East{
-  float: right;
-  width: 40%;
+.MainNavigation ul li img {
+  width: 120px;
+  height: 120px;
+  display: block;
 }
 
+.MainNavigation ul li:first-child{
+  margin-left: 0;
+}
 
-.Content_Candy {
-  height: 200px;
-  margin: 0px auto;
-  background-image: url(../img/bgd_candy-1.png);
+.MainNavigation ul li a{
+  display: block;
+  text-decoration: none;
+}
+.MainNavigation ul li img{
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin: 0 0 10px 0;
+}
+
+.MainNavigation ul li p{
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #2c261c;
+}
+.MainNavigation ul li p:hover{
+  color: #fff;
+}
+
+.Content_Candy { 
+  margin: 0 auto;
+  padding-bottom: 70px;
+  background-color: #2c271d;
+  display: block;
+  position: relative;
+  text-align: center;
+  background-image: url(../img/bgd_box.jpg);
+  background-position: 50% 30%; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
 }
+
+
+.Content_Candy blockquote {
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  padding:100px 0px 80px 0px;
+}
+
+.Content_Candy span {
+  color: #c69649;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.Content_Bakery { 
+  border-top:12px solid #c69649;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  background-color: #c69649;
+  display: block;
+  position: relative;
+  text-align: center;
+  background-image: url(../img/bgd_bakery.jpg);
+  background-position: 50% 30%; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.Content_Bakery blockquote {
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  padding:100px 0px 80px 0px;
+}
+
+
+.Content_Drink { 
+  border-top:12px solid #c69649;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  background-color: #2c271d;
+  display: block;
+  position: relative;
+  text-align: center;
+  background-image: url(../img/bgd_drink.jpg);
+  background-position: 50% 30%; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.Content_Drink blockquote {
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  padding:100px 0px 80px 0px;
+}
+
 
 .Blurb {
-
-  width: 100%;
-  // background: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0px auto;
   /* Using the "alpha" in RGBA will just control the background color */
-  background: rgba(255,255,255,.8);
-]  padding: 100px;
-
+  background: rgba(255,255,255,1);
   /* Opacity will control the whole box and everything inside of it */
-  // opacity: .2;
   width: 80%;
+  padding-bottom: 0;
+  border-bottom:12px solid #5ac4c4;
+  border-top:12px solid #5ac4c4;
+
 }
 
-h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #c69649;
-}
-p.Description {
-  text-align: left;
-}
 
 
 .carousel {
+  margin: 0;
   position: relative;
   list-style: none;
+  display: block;
+  padding: 0px;
+  height: 320px;
+  overflow: hidden;
+  
+}
+.carousel_East {
+  float: right;
+  width: 44%;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+.carousel_West {
+  float: left;
+  width: 54%;
+  padding-left :20px;
+  text-align: left;
+}
+
+.carousel_West h1 {
+  color: #853a1c;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  padding-left: 3px;
+  text-transform: uppercase;
+  padding-top: 20px;
+
+}
+.carousel_West h1 span {
+  color: #853a1c;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+}
+
+.carousel_West h2 {
+  
+  color: #49423f;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.carousel_West p {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.carousel_West p a {
+  text-decoration: none;
+  color: #c69649;
+  margin: 0 auto;
+}
+
+.carousel_Nav a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #5ac4c4;
+  padding: 20px 40px 0 40px;
 }
 
 .carousel > li {
   position: absolute;
+  margin: 0 auto;
+  padding: 0px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(500px);
+  width: 100%;
+
+}
+
+
+.carousel > li.active{
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .carousel > li:not(.active) {
@@ -266,15 +426,32 @@ p.Description {
 .carousel > li.prev-out {
   animation: prev-out 0.5s;
 }
+
+.carousel img {
+  display: block;
+  float: right;
+  margin: 0 auto 10px auto;
+  max-width: 100%;
+}
+
+.carousel h1{
+  margin: 0 0 10px 0;
+}
+
+.carousel p{
+  margin: 0;
+}
   
 @keyframes next-in {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateX(500px);
+  }
+  50% {
+    opacity: 0;
   }
   100% {
-    opacity: 1;
-    transform: translateY(0px);
+    transform: translateX(0px);
   }
 }
 
@@ -283,19 +460,23 @@ p.Description {
     opacity: 1;
     transform: translateX(0px);
   }
-  100% {
+  50% {
     opacity: 0;
-    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(-500px);
   }
 }
 
 @keyframes prev-in {
   0% {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-500px);
+  }
+  50% {
+    opacity: 1;
   }
   100% {
-    opacity: 1;
     transform: translateX(0px);
   }
 }
@@ -303,11 +484,13 @@ p.Description {
 @keyframes prev-out {
   0% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateX(0px);
+  }
+  50% {
+    opacity: 0;
   }
   100% {
-    opacity: 0;
-    transform: translateY(50px);
+    transform: translateX(500px);
   }
 }
 
@@ -321,14 +504,13 @@ p.Description {
 }
 
 body { 
-  transform: translateZ(0px);
   font-family: 'Source Sans Pro';
 }
 
 a, a:visited {
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: #5ac4c4;
   margin: 5px
 }
 
@@ -336,9 +518,14 @@ img {
   display: block;
 }
 
-
-
-
+footer { 
+  text-align: center;
+  background-color: #c69649; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 
 
@@ -433,6 +620,94 @@ img {
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
+}
+
+@media only screen and (max-width: 768px) {
+  .MainNavigation ul{
+    float: none;
+    left: auto;
+  }
+
+  .MainNavigation ul li{
+    float: none;
+    right: auto;
+    margin: 0 0 20px 0;
+  }
+
+  .MainNavigation ul li img{
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+  }
+
+  .MainNavigation {
+    height: auto;
+    position: static;
+    left: auto;
+    bottom: auto;
+  }
+
+  .Hero {
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .carousel_East {
+    float:none;
+    padding: 0 15px 0 15px;
+    text-align: center;
+  }
+
+ .carousel_West h1, h2, p {
+    font-size: 15px;
+  }
+
+ .carousel_West p {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    padding-right: 20px; 
+  }
+  .carousel_West {
+    text-align: center;
+    width: 100%;
+    padding-right: 20px; 
+  }
+
+  .carousel {
+    height: 400px;
+  }
+
+
+@media only screen and (max-width: 480px) {
+
+  .carousel_East {
+    float:none;
+    padding: 0 15px 0 15px;
+    text-align: center;
+  }
+
+ .carousel_West h1, h2, p {
+    font-size: 15px;
+  }
+
+  }
+
+ .carousel_West p {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    padding-right: 20px; 
+  }
+  .carousel_West {
+    text-align: center;
+    width: 100%;
+    padding-right: 20px; 
+  }
+
+  .carousel {
+    height: 400px;
+  }
 }
 
 /* ==========================================================================
